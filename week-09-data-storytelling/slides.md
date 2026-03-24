@@ -411,7 +411,7 @@ The title IS the insight. If your title could apply to any chart, it's not speci
 
 <div style="font-size: 1.05em; margin-top: 1em;">
 
-**In groups of 3–4** (10 minutes):
+**With your project team** (10 minutes):
 
 1. As a team, pick one of the "hate" charts from the opening exercise — pull it up on someone's screen
 2. Redesign it on paper or whiteboard:
