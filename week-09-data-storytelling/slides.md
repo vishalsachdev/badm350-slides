@@ -413,7 +413,7 @@ The title IS the insight. If your title could apply to any chart, it's not speci
 
 **In groups of 3–4** (10 minutes):
 
-1. Pick one of the "before" charts on the handout (or sketch a bad chart from memory)
+1. As a team, pick one of the "hate" charts from the opening exercise — pull it up on someone's screen
 2. Redesign it on paper or whiteboard:
    - What's the ONE message?
    - What do you remove?
