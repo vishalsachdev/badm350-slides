@@ -1,0 +1,71 @@
+name: Deploy Slides to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build all slide decks
+        run: |
+          mkdir -p dist
+          for dir in week-*/; do
+            if [ -f "$dir/package.json" ]; then
+              echo "Building $dir..."
+              cd "$dir"
+              npm install
+              npx slidev build --base "/${{ github.event.repository.name }}/$dir" --out "../dist/$dir"
+              cd ..
+            fi
+          done
+
+      - name: Create index page
+        run: |
+          cat > dist/index.html << 'INDEXEOF'
+          <!DOCTYPE html>
+          <html>
+          <head><title>BADM 350 Slides</title>
+          <style>body{font-family:system-ui;max-width:600px;margin:4em auto;padding:0 1em}a{color:#ff5f05}h1{color:#12284c}</style>
+          </head>
+          <body>
+          <h1>BADM 350 Lecture Slides</h1>
+          <ul>
+          INDEXEOF
+          for dir in dist/week-*/; do
+            name=$(basename "$dir")
+            title=$(echo "$name" | sed 's/week-/Week /;s/-/ /g')
+            echo "<li><a href=\"$name/\">$title</a></li>" >> dist/index.html
+          done
+          echo "</ul></body></html>" >> dist/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
