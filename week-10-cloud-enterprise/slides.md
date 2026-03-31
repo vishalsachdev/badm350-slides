@@ -20,6 +20,8 @@ BADM 350 — Session 1
 
 March 31, 2026
 
+[Canvas: Week 10 Overview](https://canvas.illinois.edu/courses/68238/pages/week-10-overview-cloud-and-enterprise-systems)
+
 </div>
 
 ---
@@ -161,6 +163,93 @@ Sound familiar? These are the same forces you analyzed in Case 1 (Apple). Now th
 </v-click>
 
 ---
+
+# From LAMP to LASG: Stacks Then and Now
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin-top: 1.5em;">
+
+<div style="background: #f5f5f5; border: 1px solid #ddd; padding: 1.5em; border-radius: 8px;">
+
+### 2005: LAMP Stack
+
+| Layer | Tool |
+|-------|------|
+| **L**inux | Operating system |
+| **A**pache | Web server |
+| **M**ySQL | Database |
+| **P**HP | Programming language |
+
+<div style="font-size: 0.85em; color: #888; margin-top: 0.5em;">You installed and managed ALL of this yourself.</div>
+
+</div>
+
+<div style="background: #e8f0fe; border: 1px solid #12284c; padding: 1.5em; border-radius: 8px;">
+
+### 2026: Your Stack
+
+| Layer | Tool |
+|-------|------|
+| **L**ovable | App builder + hosting |
+| **A**I Studio | Model inference |
+| **S**upabase | Database + auth + APIs |
+| **G**itHub | Version control + Pages |
+
+<div style="font-size: 0.85em; color: #12284c; margin-top: 0.5em;">You manage almost NONE of the infrastructure.</div>
+
+</div>
+
+</div>
+
+<v-click>
+
+<div style="text-align: center; margin-top: 1.5em; font-size: 1.1em; font-weight: bold; color: #ff5f05;">
+
+Same idea — layers of tools — but who manages what has completely flipped.
+
+</div>
+
+</v-click>
+
+---
+
+# Did You Know? Your Stack Is Open Source
+
+<div style="margin-top: 1em; font-size: 1.05em; line-height: 1.8;">
+
+The textbook covers open source (16.2–16.5) as if it's a niche alternative. But look at your own stack:
+
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1.5em;">
+
+<div style="background: #eaf5ea; border: 1px solid #4caf50; padding: 1.2em; border-radius: 8px;">
+
+### Open Source in Your Stack
+
+- **Supabase** — built on **PostgreSQL** (OSS since 1996)
+- **GitHub** — built on **Git** (created by Linus Torvalds)
+- **React** — powers Lovable's frontend (OSS by Meta)
+- **Node.js** — runs your backend (OSS runtime)
+
+</div>
+
+<div style="background: #fff0e6; border-left: 4px solid #ff5f05; padding: 1.2em; border-radius: 8px;">
+
+### The Business Model
+
+These companies give away the **core software** and charge for:
+
+- **Hosting** (Supabase manages PostgreSQL for you)
+- **Premium features** (GitHub Copilot, advanced auth)
+- **Support** (SLAs, uptime guarantees)
+
+This is exactly Ch 16.5: *"Give it away and make money."*
+
+</div>
+
+</div>
+
+---
 layout: section
 ---
 
@@ -276,6 +365,51 @@ Google Workspace
 <div style="text-align: center; margin-top: 1.5em; font-size: 1.1em;">
 
 **More control** ← → **Less responsibility**
+
+</div>
+
+</v-click>
+
+---
+
+# Deployment Models: Where Does It Run? (Ch 16.9)
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5em; margin-top: 1.5em;">
+
+<div style="background: #e8f0fe; border-left: 4px solid #12284c; padding: 1.2em; border-radius: 8px;">
+
+### Public Cloud
+Third-party provider hosts everything. **You share infrastructure** with other customers.
+
+*Your projects: Supabase, Lovable, GitHub — all public cloud.*
+
+</div>
+
+<div style="background: #f5f5f5; border: 1px solid #ddd; padding: 1.2em; border-radius: 8px;">
+
+### Private Cloud
+Organization owns or leases its own pool of resources. **No shared tenancy.**
+
+*Banks, hospitals, government — compliance requirements.*
+
+</div>
+
+<div style="background: #fff0e6; border-left: 4px solid #ff5f05; padding: 1.2em; border-radius: 8px;">
+
+### Hybrid Cloud
+Mix of both. Normal traffic on public cloud, sensitive data on private.
+
+*Most enterprises land here.*
+
+</div>
+
+</div>
+
+<v-click>
+
+<div style="background: #f0f0f5; border-left: 4px solid #12284c; padding: 1em; border-radius: 8px; margin-top: 1.5em;">
+
+**Cloudbursting (16.9):** Use public cloud to handle demand spikes, then fall back to private. Think Taylor Swift ticket drops or Black Friday. The textbook calls these unpredictable surges **"black swan events."**
 
 </div>
 
