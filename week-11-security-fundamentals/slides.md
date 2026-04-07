@@ -560,26 +560,51 @@ Now users can only read/write their own rows. The anon key is still public, but 
 
 <div style="margin-top: 1em; font-size: 1.1em;">
 
-**Open your app. Open the CIA checklist. Work through it together.**
+**Open your app and the CIA checklist on Canvas. Answer these 4 questions:**
 
 </div>
 
-<div style="margin-top: 1.5em; font-size: 1em; line-height: 1.8;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1.5em; font-size: 0.95em;">
 
-1. **Check Supabase** → Authentication → Policies (Confidentiality)
-2. **Open DevTools** → Network tab → use your app → look at API calls (Integrity)
-3. **Test error states** → turn off WiFi, submit empty forms (Availability)
-4. **Write down 3 vulnerabilities** you find — CIA classification for each
+<div style="background: #e8f0fe; border-left: 4px solid #12284c; padding: 1.2em; border-radius: 8px;">
+
+### 1. Who can see your data?
+
+Log out of your app. Can you still see user data? Open your Supabase dashboard — is RLS turned on?
+
+</div>
+
+<div style="background: #fff0e6; border-left: 4px solid #ff5f05; padding: 1.2em; border-radius: 8px;">
+
+### 2. Can someone enter bad data?
+
+Try submitting an empty form. Try pasting nonsense into every field. Does your app accept it?
+
+</div>
+
+<div style="background: #eaf5ea; border-left: 4px solid #4caf50; padding: 1.2em; border-radius: 8px;">
+
+### 3. What breaks when things go wrong?
+
+Turn off WiFi and use your app. What happens? Do users see a helpful message or a blank screen?
+
+</div>
+
+<div style="background: #f5f5f5; border: 2px solid #e57373; padding: 1.2em; border-radius: 8px;">
+
+### 4. Write down 3 vulnerabilities
+
+One per CIA category if possible. These become your Checkpoint 4 security section.
+
+</div>
 
 </div>
 
 <v-click>
 
-<div style="background: #e8f0fe; border-left: 4px solid #12284c; padding: 1em; border-radius: 8px; margin-top: 1.5em;">
+<div style="margin-top: 1em; text-align: center; font-size: 1.05em; color: #888;">
 
-**I'll walk around. Flag me if you're stuck or if you found something interesting.**
-
-If you don't find any vulnerabilities, you're not looking hard enough. Every app in this room has them.
+I'll walk around. Flag me if you're stuck or found something interesting.
 
 </div>
 
