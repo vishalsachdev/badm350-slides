@@ -14,7 +14,9 @@ drawings:
 ---
 
 <style>
-.slidev-navigation, .slidev-nav, nav {
+/* Hide TOC panel on the right */
+div[class*="fixed"][class*="right-5"],
+div[class*="fixed"][class*="right-4"][class*="z-modal"] {
   display: none !important;
 }
 </style>
