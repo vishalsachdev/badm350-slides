@@ -8,6 +8,7 @@ author: Vishal Sachdev
 transition: slide-left
 colorSchema: light
 mdc: true
+navigator: false
 ---
 
 # Security & Controls
