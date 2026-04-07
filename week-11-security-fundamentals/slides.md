@@ -9,7 +9,15 @@ transition: slide-left
 colorSchema: light
 mdc: true
 navigator: false
+drawings:
+  enabled: false
 ---
+
+<style>
+.slidev-navigation, .slidev-nav, nav {
+  display: none !important;
+}
+</style>
 
 # Security & Controls
 
