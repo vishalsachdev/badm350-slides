@@ -7,6 +7,9 @@ Slidev-powered lecture slides for BADM 350: IT for Networked Organizations.
 | Week | Topic | Slides |
 |------|-------|--------|
 | 9 | Data Storytelling | [View](https://vishalsachdev.github.io/badm350-slides/week-09-data-storytelling/) |
+| 10 | Cloud & Enterprise | [View](https://vishalsachdev.github.io/badm350-slides/week-10-cloud-enterprise/) |
+| 11 | Security Fundamentals | [View](https://vishalsachdev.github.io/badm350-slides/week-11-security-fundamentals/) |
+| 12 | AI Fundamentals | [View](https://vishalsachdev.github.io/badm350-slides/week-12-ai-fundamentals/) |
 
 ## Development
 
