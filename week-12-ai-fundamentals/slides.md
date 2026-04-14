@@ -96,9 +96,17 @@ layout: center
 
 ## Why this matters (strategically)
 
-- **The bottleneck is shifting.** From *"can we build it?"* → *"can we describe what we want?"*
-- **The new skill is decomposition** — breaking a business problem into things an agent can actually do
-- **This is a manager's job, not a developer's job** — and it's exactly what you'll be asked to do in 2 years
+<div style="font-size: 1.3em; color: #c84113; margin-bottom: 0.8em;">
+
+**Execution is cheap.** *Deciding what to execute* is the job.
+
+</div>
+
+- **The old bottleneck:** *"Can we build it?"* — engineers, time, budget
+- **The new bottleneck:** *"Should we build it? For whom? Why now?"*
+- **Step 1 — Decide.** Which problem, which customer, which tradeoff. An agent can't pick the right fight for you.
+- **Step 2 — Describe.** Decompose that decision into things an agent can actually do.
+- **This is a manager's job, not a developer's job** — and it's exactly what you'll be asked to do in 2 years.
 
 <div style="margin-top: 1.5em;">
 
