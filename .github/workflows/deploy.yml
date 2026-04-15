@@ -37,6 +37,15 @@ jobs:
             fi
           done
 
+      - name: Copy static dashboards
+        run: |
+          for dir in yellowdig-themes; do
+            if [ -d "$dir" ]; then
+              echo "Copying $dir..."
+              cp -R "$dir" "dist/$dir"
+            fi
+          done
+
       - name: Create index page
         run: |
           cat > dist/index.html << 'INDEXEOF'
@@ -54,6 +63,9 @@ jobs:
             title=$(echo "$name" | sed 's/week-/Week /;s/-/ /g')
             echo "<li><a href=\"$name/\">$title</a></li>" >> dist/index.html
           done
+          if [ -d dist/yellowdig-themes ]; then
+            echo "<li><a href=\"yellowdig-themes/\">Yellowdig Discussion Themes (dashboard)</a></li>" >> dist/index.html
+          fi
           echo "</ul></body></html>" >> dist/index.html
 
       - uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BADM 350 — Yellowdig Discussion Themes</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root { --orange: #c84113; --ink: #1a1a1a; --muted: #666; --rule: #e5e5e5; --bg: #fafaf7; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; color: var(--ink); background: var(--bg); line-height: 1.5; }
+  header { border-bottom: 3px solid var(--orange); padding-bottom: 1rem; margin-bottom: 2.5rem; }
+  h1 { margin: 0 0 .25rem; font-size: 1.9rem; }
+  header p { margin: 0; color: var(--muted); }
+  h2 { margin: 3rem 0 1rem; font-size: 1.3rem; border-bottom: 1px solid var(--rule); padding-bottom: .4rem; }
+  .chart-wrap { background: white; padding: 1rem 1.25rem; border: 1px solid var(--rule); border-radius: 6px; }
+  table { width: 100%; border-collapse: collapse; background: white; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+  th, td { text-align: left; padding: .75rem .9rem; border-bottom: 1px solid var(--rule); vertical-align: top; font-size: .92rem; }
+  th { background: #f4f1e8; font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; color: #555; }
+  tr:last-child td { border-bottom: none; }
+  td.rank { font-weight: 700; color: var(--orange); width: 2.5rem; }
+  td.num { font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; font-size: .82rem; }
+  .rationale { color: var(--muted); font-size: .8rem; margin-top: .25rem; font-style: italic; }
+  .muted { color: #aaa; font-style: italic; font-size: .85rem; }
+  a { color: var(--orange); text-decoration: none; font-size: .85rem; }
+  a:hover { text-decoration: underline; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .82rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>BADM 350 — Yellowdig Discussion Themes</h1>
+  <p>What students brought to the conversation, Spring 2026. Anonymized.</p>
+</header>
+
+<h2>Themes</h2>
+<div class="chart-wrap"><canvas id="themesChart" height="420"></canvas></div>
+
+<h2>Companies &amp; Products Mentioned</h2>
+<div class="chart-wrap"><canvas id="companiesChart" height="420"></canvas></div>
+
+<h2>Top 10 Case Study Candidates</h2>
+<p style="color:var(--muted); font-size:.9rem; margin-top:0;">Posts about real business decisions or incidents, ranked by student engagement (comments, reactions, views).</p>
+<table>
+  <thead>
+    <tr><th>#</th><th>Company / Subject</th><th>What happened</th><th>Engagement</th><th>Link</th></tr>
+  </thead>
+  <tbody>
+    
+        <tr>
+          <td class="rank">1</td>
+          <td><strong>Google, Gemini, Apple Maps</strong><div class="rationale">Demonstrates how major tech companies are embedding generative AI into core consumer products to enhance user experience and competitive positioning.</div></td>
+          <td>Google announced integration of Gemini into Google Maps to enable users to ask complex questions and receive AI-directed recommendations for locations matching their needs.</td>
+          <td class="num">17c · 0r · 16v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">2</td>
+          <td><strong>Uber Eats</strong><div class="rationale">Illustrates the tension between personalization convenience and algorithmic influence over consumer choice, raising questions about data-driven decision-making in commerce.</div></td>
+          <td>Uber Eats launched an AI chat assistant that auto-populates shopping carts based on customer photos and text prompts using real-time store data and purchase history.</td>
+          <td class="num">14c · 0r · 12v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">3</td>
+          <td><strong>CareCloud</strong><div class="rationale">Real-world healthcare cybersecurity incident involving unauthorized access to sensitive patient data, raising questions about data protection standards and incident response in healthcare tech.</div></td>
+          <td>CareCloud disclosed a cyberattack on March 16 in which hackers accessed its systems containing electronic health records for over eight hours.</td>
+          <td class="num">12c · 0r · 14v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">4</td>
+          <td><strong>Anthropic, Claude, OpenAI, Pentagon</strong><div class="rationale">Demonstrates how a company&#x27;s ethical stance and refusal to serve certain customers can become a market differentiator and drive user adoption.</div></td>
+          <td>Anthropic refused to allow the Pentagon to use Claude, leading to increased Claude downloads and user preference for the company&#x27;s strict security stance.</td>
+          <td class="num">12c · 0r · 13v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">5</td>
+          <td><strong>Spotify</strong><div class="rationale">Demonstrates how AI-driven personalization creates sustainable competitive advantage and switching costs through data network effects in consumer technology.</div></td>
+          <td>Spotify leverages machine learning on user behavior data to build a self-reinforcing feedback loop that improves music recommendations and increases user retention.</td>
+          <td class="num">11c · 0r · 14v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">6</td>
+          <td><strong>Apple</strong><div class="rationale">Illustrates the strategic tension between privacy commitments and competitive AI feature development in consumer technology.</div></td>
+          <td>Apple has delayed advanced AI integration in products like Siri, prioritizing privacy over feature parity with competitors.</td>
+          <td class="num">11c · 0r · 14v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">7</td>
+          <td><strong>NVIDIA</strong><div class="rationale">Demonstrates how a major AI infrastructure company is addressing enterprise adoption barriers by prioritizing safety and transparency as competitive differentiators.</div></td>
+          <td>NVIDIA released safety frameworks and open-sourced tools for enterprise AI agents to enable safer deployment in business settings.</td>
+          <td class="num">10c · 0r · 15v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">8</td>
+          <td><strong>Amazon, Microsoft, NVIDIA, Meta</strong><div class="rationale">Illustrates the tension between long-term AI capital requirements and short-term investor return expectations, a critical strategic challenge for tech companies betting heavily on AI infrastructure.</div></td>
+          <td>Big tech companies lost approximately $1 trillion in market value during an AI-related stock selloff driven by investor concerns that massive infrastructure investments are not generating profits quickly enough.</td>
+          <td class="num">10c · 0r · 13v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">9</td>
+          <td><strong>Apple, Siri, ChatGPT, Gemini, Claude</strong><div class="rationale">This represents a significant strategic shift in how Apple&#x27;s voice assistant competes with standalone AI products and impacts platform ecosystems.</div></td>
+          <td>Apple is reportedly planning to open Siri to integrate with third-party AI models including ChatGPT, Gemini, and Claude.</td>
+          <td class="num">10c · 0r · 8v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+        <tr>
+          <td class="rank">10</td>
+          <td><strong>HSBC</strong><div class="rationale">Demonstrates how major financial institutions are institutionalizing AI leadership and treating it as a strategic priority rather than a tactical initiative.</div></td>
+          <td>HSBC appointed its first chief AI officer to drive AI strategy and automation across the organization.</td>
+          <td class="num">10c · 0r · 7v</td>
+          <td><span class="muted">no link</span></td>
+        </tr>
+        
+  </tbody>
+</table>
+
+<footer>
+  Generated from Yellowdig Engage API · BADM 350 Spring 2026 · No personally identifiable information.
+</footer>
+
+<script>
+const orange = '#c84113';
+const barOpts = {
+  indexAxis: 'y',
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: { legend: { display: false } },
+  scales: {
+    x: { beginAtZero: true, ticks: { precision: 0 } },
+    y: { ticks: { font: { size: 12 } } }
+  }
+};
+
+new Chart(document.getElementById('themesChart'), {
+  type: 'bar',
+  data: { labels: ["Business Strategy & Competition", "AI in Industry Verticals", "Network Effects & Competitive Moats", "AI & Workforce Transformation", "AI Product Strategy", "Cybersecurity & Data Breaches", "AI Privacy & Data Protection", "Data-Driven Marketing & Personalization", "AI in Software Development", "AI Policy & Regulation", "AI Safety & Alignment", "Platform Lock-in & Switching Costs", "AI Ethics & Governance", "AI Infrastructure & Investment", "AI Content & Media Generation", "AI in Education", "AI in Healthcare", "AI Accessibility & Adoption", "AI Copyright & IP", "AI in Defense & Military"], datasets: [{ data: [58, 34, 30, 28, 23, 22, 21, 20, 16, 15, 15, 14, 12, 11, 10, 9, 8, 7, 5, 5], backgroundColor: orange }] },
+  options: barOpts
+});
+
+new Chart(document.getElementById('companiesChart'), {
+  type: 'bar',
+  data: { labels: ["Apple", "OpenAI", "Amazon", "Anthropic", "Google", "Meta", "Netflix", "NVIDIA", "Uber", "Gemini", "Spotify", "Claude", "Walmart", "IBM", "ChatGPT", "Disney", "Microsoft", "Grok", "Yahoo", "Waymo"], datasets: [{ data: [12, 10, 9, 8, 7, 6, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 2, 2], backgroundColor: '#1a1a1a' }] },
+  options: barOpts
+});
+</script>
+</body>
+</html>
