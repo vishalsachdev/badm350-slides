@@ -10,6 +10,7 @@ Slidev-powered lecture slides for BADM 350: IT for Networked Organizations.
 | 10 | Cloud & Enterprise | [View](https://vishalsachdev.github.io/badm350-slides/week-10-cloud-enterprise/) |
 | 11 | Security Fundamentals | [View](https://vishalsachdev.github.io/badm350-slides/week-11-security-fundamentals/) |
 | 12 | AI Fundamentals | [View](https://vishalsachdev.github.io/badm350-slides/week-12-ai-fundamentals/) |
+| 13 | Agentic Workflows | [View](https://vishalsachdev.github.io/badm350-slides/week-13-agentic/) |
 
 ## Development
 
